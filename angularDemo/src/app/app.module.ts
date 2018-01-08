@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { TodoItemsComponent } from './todo-items/todo-items.component';
 
+// 先import我們的TodoListService
+import { TodoListService } from './todo-list.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { TodoItemsComponent } from './todo-items/todo-items.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoListService], // 在providers中加入TodoListService
   bootstrap: [AppComponent]
 })
 export class AppModule { }

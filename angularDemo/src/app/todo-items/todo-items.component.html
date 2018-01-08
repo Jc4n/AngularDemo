@@ -1,14 +1,14 @@
 <ul>
-  <li *ngFor="let item of items;let recordIndex = index;let firstRecord = first;let lastRecotd = last; let evenRecord = even; let oddRecord = odd">
+  <li *ngFor="let item of getTodoList();let recordIndex = index;let firstRecord = first;let lastRecotd = last; let evenRecord = even; let oddRecord = odd">
     <label htmlFor="chk_{{item.id}}">
-      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="chkItem(item)">
+      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)">
       <span [ngClass]="{'done' : item.done, 'text-danger': firstRecord, 'text-warning': lastRecotd, 'bg-info': evenRecord, 'bg-success': oddRecord}">
         {{ recordIndex }} .{{ item.value }}
       </span>
 
     </label>
     |
-    <a href="#" (click)="delItem(item.id)">刪除</a>
+    <a href="#" (click)="delete(item.id)">刪除</a>
     <span *ngIf="item.done">(已完成)</span>
   </li>
 </ul>
