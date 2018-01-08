@@ -8,4 +8,9 @@ import { TodoItem } from './shared/todo-item';
 })
 export class AppComponent {
   title = 'app';
+  bio = {
+    name: 'wellwind',
+    age: 30,
+    sex: 'M'
+  };
 }

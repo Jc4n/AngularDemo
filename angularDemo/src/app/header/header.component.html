@@ -2,6 +2,10 @@
   {{title}}
 </h1>
 <h2>{{ '現在時間 : ' + getDate() }}</h2>
+<h3>pipe demo:{{ 'normal-' + ( getDate() | date)  }}</h3>
+<h3>pipe demo:{{ 'ymd-' + ( getDate() | date:'y-MM-dd')  }}</h3>
+<h3>pipe demo:{{ 'shortDate-' + ( getDate() | date:'shortDate')  }}</h3>
+<h3>pipe demo:{{ 'shortTime-' + ( getDate() | date:'shortTime')  }}</h3>
 <div>
   <span [ngClass]="getBlueClass()">TodoItemsComponent中測試blue class</span>
 </div>
