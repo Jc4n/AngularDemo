@@ -9,8 +9,9 @@ import { TodoListService } from './../todo-list.service';
 })
 export class TodoItemsComponent implements OnInit {
   constructor(private todoListService: TodoListService) { } 
-  
+   // 在ngOnInit()中，要求TodoListService從後端抓取資料
   ngOnInit() {
+    this.todoListService.loadTodoList();
   }
 
   getTodoList() {
