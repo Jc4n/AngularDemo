@@ -1,3 +1,15 @@
 .done{
     text-decoration: line-through;
 }
+.text-danger{
+    color: red;
+}
+.text-warning {
+    color: yellow;
+}
+.bg-info{
+    background-color: antiquewhite;
+}
+.bg-success{
+    background-color: steelblue;
+}
