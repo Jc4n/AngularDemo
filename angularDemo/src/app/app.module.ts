@@ -10,13 +10,15 @@ import { TodoItemsComponent } from './todo-items/todo-items.component';
 
 // 先import我們的TodoListService
 import { TodoListService } from './todo-list.service';
+import { TodoDonePipe } from './todo-done.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddFormComponent,
-    TodoItemsComponent
+    TodoItemsComponent,
+    TodoDonePipe
   ],
   imports: [
     BrowserModule,
