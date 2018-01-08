@@ -9,3 +9,6 @@
 <div>
   <span [ngClass]="getBlueClass()">TodoItemsComponent中測試blue class</span>
 </div>
+<h2>Async Hero Message and AsyncPipe</h2>
+<p>Message: {{ message$ | async }}</p>
+<button (click)="resend()">Resend</button>
