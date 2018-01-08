@@ -1,10 +1,12 @@
 <ul>
   <li *ngFor="let item of items">
     <label htmlFor="chk_{{item.id}}">
-      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="chkItem(item)"> {{ item.value }}
+      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="chkItem(item)">
+      <span [ngClass]="{'done' : item.done}">{{ item.value }}</span>
+
     </label>
     |
     <a href="#" (click)="delItem(item.id)">刪除</a>
     <span *ngIf="item.done">(已完成)</span>
-    </li>
+  </li>
 </ul>
