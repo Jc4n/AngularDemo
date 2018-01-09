@@ -1,6 +1,6 @@
 import { Http } from '@angular/http'; // 我們要使用的Http
 import 'rxjs/add/operator/toPromise'; // 幫助我們將RxJs轉為Promise
-import { TodoItem } from './shared/todo-item';
+import { TodoItem } from '../shared/todo-item';
 import { Injectable } from '@angular/core';
 
 @Injectable()

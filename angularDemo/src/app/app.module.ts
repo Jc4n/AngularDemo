@@ -5,30 +5,23 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { AddFormComponent } from './add-form/add-form.component';
-import { TodoItemsComponent } from './todo-items/todo-items.component';
 
-// 先import我們的TodoListService
-import { TodoListService } from './todo-list.service';
-import { TodoDonePipe } from './todo-done.pipe';
 import { BsButtonDirective } from './bs-button.directive';
-
+import { TodoAppModule } from './todo-app/todo-app.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddFormComponent,
-    TodoItemsComponent,
-    TodoDonePipe,
     BsButtonDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TodoAppModule
   ],
-  providers: [TodoListService], // 在providers中加入TodoListService
+  providers: [], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
