@@ -14,8 +14,7 @@ import { TodoDonePipe } from './todo-done.pipe';
     FormsModule
   ],
   exports: [
-    AddFormComponent,
-    TodoItemsComponent
+    TodoAppComponent
   ],
   declarations: [
     TodoAppComponent,
